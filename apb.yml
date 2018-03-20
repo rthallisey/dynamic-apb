@@ -1,0 +1,23 @@
+version: 1.0
+name: dynamic-apb
+description: Dynamic view of pods
+bindable: true
+async: optional
+metadata:
+  longDescription: A dynamic view of pods in the ansible-service-broker namespace
+  displayName: Dynamic APB
+plans:
+  - name: view
+    description: View pods in the ansible-service-broker namespace
+    free: true
+    metadata:
+      displayName: View
+      longDescription: View pods in the ansible-service-broker namespace
+      cost: $0.00
+    parameters:
+    - name: pods
+      default: 'None'
+      enum: ['None']
+      type: enum
+      title: Pods in ansible-service-broker namespace
+      required: true
